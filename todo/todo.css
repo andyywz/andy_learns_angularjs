@@ -26,10 +26,15 @@
 
 .cleared {
   float: left;
-  margin: 25px;
+  margin: 25px 20px;
 }
 
 .done-true {
   text-decoration: line-through;
   color: gray;
+}
+
+.item {
+  width: 270px;
+  overflow: hidden;
 }
