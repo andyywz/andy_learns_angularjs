@@ -7,6 +7,10 @@ function TodoCtrl($scope) {
     return $scope.todos.length;
   };
   
+  $scope.getClearedTodos = function () {
+    return $scope.cleared.length;
+  };
+  
   $scope.getRemainingTodos = function () {
     var count = 0;
     $scope.todos.forEach(function (todo) {
@@ -18,9 +22,11 @@ function TodoCtrl($scope) {
   };
   
   $scope.addTodo = function () {
-    if ($scope.formTodoText.length > 0) {
+    if ($scope.formTodoText) {
       $scope.todos.push({text: $scope.formTodoText, done: false});
       $scope.formTodoText = "";
+    } else {
+      alert("Field cannot be blank");
     };
   };
   

@@ -1,5 +1,27 @@
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .main {
-  padding: 20px 50px;
+  width: 720px;
+  margin: 30px auto;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  background: rgba(230, 230, 230, 1);
+}
+
+.todos {
+  float: left;
+  margin: 10px 20px 20px 30px;
+  padding-right: 40px;
+  border-right: 1px solid lightgray;
+}
+
+.cleared {
+  float: left;
+  margin: 10px 30px 20px 20px;
 }
 
 .done-true {
