@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <script src="../angular.min.js"></script>
+  <script src="todo.js"></script>
+  <script src="../underscore.js"></script>
+  
+  <link rel="stylesheet" href="todo.css">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="main" ng-controller="TodoCtrl">
+    <h2>Total Todos: {{getTotalTodos()}}</h2>
+    <h4>{{getRemainingTodos()}} todos remaining...</h4>
+    <ul class="unstyled">
+      <li ng-repeat="todo in todos">
+        <input type="checkbox" ng-model="todo.done">
+        <span class="done-{{todo.done}}">{{todo.text}}</span>
+      </li>
+    </ul>
+    
+    <form class="form-horizontal">
+      <input type="text" ng-model="formTodoText" placeholder="Add a new todo item..." required>
+      <button class="btn-primary btn-small" ng-click="addTodo()"><i class="icon-plus"></i>Add</button>
+    </form>
+    
+    <button class="btn-danger btn-large" ng-click="clearCompleted()"><i class="icon-trash"></i>Clear Completed</button>
+    
+    <hr>
+    
+    <ul class="unstyled">
+      <li ng-repeat="todo in cleared">
+        <input type="checkbox" ng-model="todo.done">
+        <span class="done-true">{{todo.text}}</span>
+      </li>
+    </ul>
+    
+    <button class="btn-primary btn-small" ng-click="resetList()"><i class="icon-plus"></i>Reset</button>
+  </div>
+</body>
+</html>

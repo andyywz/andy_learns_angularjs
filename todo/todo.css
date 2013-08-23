@@ -1,0 +1,8 @@
+.main {
+  padding: 20px 50px;
+}
+
+.done-true {
+  text-decoration: line-through;
+  color: gray;
+}
