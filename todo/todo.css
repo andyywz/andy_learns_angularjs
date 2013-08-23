@@ -4,6 +4,11 @@
   clear: both;
 }
 
+.title {
+  line-height: 35px;
+  margin: 0;
+}
+
 .main {
   width: 720px;
   margin: 30px auto;
@@ -14,14 +19,14 @@
 
 .todos {
   float: left;
-  margin: 10px 20px 20px 30px;
-  padding-right: 40px;
+  margin: 25px;
+  padding: 0 20px;
   border-right: 1px solid lightgray;
 }
 
 .cleared {
   float: left;
-  margin: 10px 30px 20px 20px;
+  margin: 25px;
 }
 
 .done-true {
